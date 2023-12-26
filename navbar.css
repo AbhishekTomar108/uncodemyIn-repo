@@ -1,0 +1,431 @@
+
+.categories{
+   position: absolute;
+   left: 295px;
+   top: 13px;
+
+}
+.categories nav::after{
+   display: none !important;
+}
+nav menuitem {
+   position:relative;
+   display:block;
+   opacity:0;
+   cursor:pointer;
+}
+
+nav menuitem > menu {
+   position: absolute;
+   pointer-events:none;
+   margin: auto;
+}
+nav > menu { display:flex; 
+    margin: 0;
+    padding: 0;
+
+
+}
+
+nav > menu > menuitem { pointer-events: all; opacity:1; }
+menu menuitem a { white-space:nowrap; display:block; }
+   
+menuitem:hover > menu {
+   pointer-events:initial;
+}
+menuitem:hover > menu > menuitem,
+menu:hover > menuitem{
+   opacity:1;
+}
+nav > menu > menuitem menuitem menu {
+   transform:translateX(100%);
+   top:0; right:0;
+}
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+
+.navr{
+position: static;
+    width: 100%;
+    top: 0;
+    background-color:transparent;
+    /* z-index: 10; */
+    margin: 0px 0 -24px -90px;
+
+
+}
+
+
+
+
+
+
+.navr a {
+   background: #ff5421;
+   color: white !important;
+ 
+   /* background:#ff5421;
+   color:white; */
+   min-width:190px;
+   transition: background 0.5s, color 0.5s, transform 0.5s;
+   margin:0px 6px 6px 0px;
+   padding:8px 56px;
+   box-sizing:border-box;
+   border-radius:3px;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+   position:relative;
+   
+}
+.navr a:hover{
+   background:#f7fafe;
+   color:black !important  ;
+}
+
+/* .navr a:hover:before {
+   content: '';
+   top:0;left:0;
+   position:absolute;
+   background:rgba(0, 0, 0, 0.2);
+   width:100%;
+   height:100%;
+} */
+
+nav > menu > menuitem > a + menu:after{
+   content: '';
+   position:absolute;
+   border:10px solid transparent;
+   border-top: 10px solid #ff5421;
+   left:12px;
+   top: -40px;  
+}
+nav menuitem > menu > menuitem > a + menu:after{ 
+   content: '';
+   position:absolute;
+   border:10px solid transparent;
+   border-left: 10px solid #ff5421;
+   top: 12px;
+   left:-310px;
+   transition: opacity 0.6, transform 0s;
+}
+
+nav > menu > menuitem > menu > menuitem{
+   transition: transform 0.6s, opacity 0.6s;
+   transform:translateY(150%);
+   opacity:0;
+}
+nav > menu > menuitem:hover > menu > menuitem,
+nav > menu > menuitem.hover > menu > menuitem{
+   transform:translateY(0%);
+   opacity: 1;
+}
+
+menuitem > menu > menuitem > menu > menuitem{
+   transition: transform 0.6s, opacity 0.6s;
+   transform:translateX(195px) translateY(0%);
+   opacity: 0;
+} 
+menuitem > menu > menuitem:hover > menu > menuitem,  
+menuitem > menu > menuitem.hover > menu > menuitem{  
+   transform:translateX(0) translateY(0%);
+   opacity: 1;
+}
+
+
+/* Add this CSS code to your existing styles */
+nav menuitem > menu {
+    padding: 0;
+    position: absolute;
+    pointer-events: none; /* Initially, set pointer-events to none to hide the content */
+    margin: -2px 0 0 0;
+    opacity: 0; /* Initially, set opacity to 0 to hide the content */
+    transition: opacity 0.3s ease-in-out; /* Add a transition effect for smooth appearance/disappearance */
+ }
+ 
+ menuitem:hover > menu {
+    pointer-events: auto; /* Enable pointer events on hover to show the content */
+    opacity: 1; /* Show the content when hovering over menuitem */
+ }
+ 
+ /* Hide the content when hovering over other parts of the website */
+ body:hover > .categories nav menuitem > menu {
+    pointer-events: none;
+    opacity: 0;
+ }
+ 
+ /* Adjust z-index to control the layering of the menu items */
+ nav menuitem > menu {
+    z-index: 1; /* Ensure the menu is above other content */
+ }
+ 
+
+ @media (max-width: 320px) {
+ .categories {
+
+   top: -21px !important;
+}
+.nav-top-head{
+   height: 27vw !important;
+}
+
+.navr a {
+ 
+   min-width: 68px !important;
+   width: 142px ;
+   font-size: 8px !important;
+
+}
+
+
+
+ }
+ @media (max-width: 640px) {
+ .categories {
+   position: absolute;
+   left: 102px !important;
+   top: -20px !important;
+}
+}
+
+
+@media only screen and (max-width: 345px) and (min-width: 321px)  {
+   .nav-top-head span {
+      font-size: 11px !important;
+      
+  }
+}
+@media only screen and (max-width: 1450px) and (min-width: 1400px)  {
+   .categories {
+      position: absolute;
+      left: 375px !important;
+      top: 12px !important;
+   }
+}
+@media only screen and (max-width: 1240px) and (min-width: 1020px)  {
+   .courses {
+      width: 16rem !important;
+  }
+
+}
+@media only screen and (max-width: 1165px) and (min-width: 1000px)  {
+
+  .course-right-section {
+   width: 70% !important;
+   padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .categories {
+      position: absolute;
+    left: 102px;
+    top: -28px;
+    }  
+    .navr a{
+        padding: 8px 10px !important;
+        min-width: 155px;
+        background:#ff5421;
+        color: white;
+        box-shadow: none;
+        font-size: 10px;
+       
+    }
+    .mainc{
+      padding: 8px 10px !important;
+      min-width: 62px !important;
+      background: #ff5421;
+      color: white;
+      box-shadow: none;
+      width: 10px !important;
+      font-size: 7px !important;
+      height: 10px;
+      display: flex;
+      align-items: center;
+    }
+    nav > menu > menuitem > a + menu:after{
+      display: none !important;
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1035px) and (min-width: 780px) {
+   .navigation-section ul {
+     column-gap: 15px !important;
+   }
+   .categories {
+   
+     left: 300px !important;
+    
+   }
+   .navr a {
+  
+     min-width: 145px !important;
+     padding: 8px 10px 8px 23px !important;
+   }
+   .mainc {
+   
+     width: 10px;
+   }
+   .nav-top-head {
+   
+     font-size: 11.8px !important;
+ 
+ }
+ .book-form .form-cont .buttons a{
+   padding: 5px !important;
+   font-size: 12px;
+   width: 10rem;
+ }
+ @media only screen and (max-width: 900px) and (min-width: 781px) {
+   .navigation-section ul {
+     column-gap: 15px !important;
+   }
+   .categories {
+   
+     left: 220px !important;
+    
+   }
+   .logoimages {
+   
+     width: 129px !important;
+     height: 6rem !important;
+   }
+   .loG {
+     height: 68px;
+     width: 122px;
+     /* border-radius: 0 0 35px 35px; */
+     margin: -17px -5px 0 0;
+ }
+ }
+ .navr a {
+  
+   min-width: 145px !important;
+   padding: 8px 10px 8px 23px !important;
+ }
+ .mainc {
+ 
+   width: 10px;
+ }
+ .nav-top-head {
+  
+   display: flex !important;
+   
+   justify-content: flex-end !important;
+ }
+ 
+ }
+
+ @media only screen and (min-width: 320px) and (max-width: 375px) {
+   .navigation-container {
+      height: 500px !important;
+  }
+  .navigation-section ul {
+   flex-direction: column;
+   row-gap: 6px !important;
+   max-height: 190px !important;
+}
+.Train{
+height: 165px !important;
+    overflow-y: scroll !important;
+}
+.mobile-whats .whats-box img {
+   display: block !important;
+   height: 170px !important;
+}
+
+   /* .courses{
+      height: auto !important;
+   }
+   .Train {
+      height: 50vh !important;
+      overflow-y: scroll !important;
+  } */
+ }
+
+
+
+
+ @media only screen and (max-width: 390px) and (min-width: 100px) {
+   .navigation-container {
+      height: 500px !important;
+  }
+   /* .courses{
+      height: auto !important;
+   }
+   .Train {
+      height: 50vh !important;
+      overflow-y: scroll !important;
+  } */
+  .Train{
+   height: 165px !important;
+       overflow-y: scroll !important;
+   }
+   .course-right-section {
+      height: 252px !important;
+      overflow-y: scroll !important;
+  }
+  .mobile-whats .whats-box img {
+   display: block !important;
+   height: 170px !important;
+}
+ }
+ @media only screen and (max-width: 260px) and (min-width: 100px) {
+ .categories {
+
+   left: 325px !important;
+ 
+}
+.banner-image-container img {
+   margin: -56px 0 0 0;
+   height: 161px !important;
+}
+.course-right-section {
+   height: 252px !important;
+   overflow-y: scroll !important;
+}
+.mobile-whats .whats-box img {
+   display: block !important;
+   height: 170px !important;
+}
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+   .navigation-container {
+      height: 500px !important;
+  }
+   /* .courses{
+      height: auto !important;
+   }
+   .Train {
+      height: 50vh !important;
+      overflow-y: scroll !important;
+  } */
+  .Train{
+   height: 165px !important;
+       overflow-y: scroll !important;
+   }
+   .course-right-section {
+      height: 252px !important;
+      overflow-y: scroll !important;
+  }
+
+ }
